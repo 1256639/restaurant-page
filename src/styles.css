@@ -5,13 +5,20 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-image: url('./images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    line-height: 1.6;
 }
 
 header {
-    background-color: #333;
+    background-color: #8B4513;
     padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    border-bottom: 3px solid #A0522D;
 }
 
 nav {
@@ -21,26 +28,208 @@ nav {
 }
 
 nav button {
-    background-color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    background-color: #FFD700;
+    border: 2px solid #FFA500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 1rem;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    font-family: 'Comic Sans MS', cursive;
+    transition: all 0.3s ease;
+    color: #8B4513;
 }
 
 nav button:hover {
-    background-color: #ddd;
+    background-color: #FFA500;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 nav button.active {
-    background-color: #007bff;
+    background-color: #FF6347;
     color: white;
+    border-color: #FF4500;
 }
 
+/* HOME */ 
+
 #content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero {
+    background-color: #1e3a5f;
     padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    border-radius: 15px;
+    color: white;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    margin: 20px auto 0 auto;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.content-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: stretch;
+    margin-bottom: 1.5rem;
+}
+
+.text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    height: 100%;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-content img {
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #FFD700;
+}
+
+.bottom-text {
+    text-align: right;
+    font-size: 0.95rem;
+    font-weight: normal;
+    color: #fff;
+    opacity: 0.85;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-layout {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .text-content p {
+        font-size: 1rem;
+    }
+    .image-content img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .bottom-text {
+        text-align: left;
+    }
+}
+
+/* MENU */
+
+.menu {
+    background-color: #1e3a5f;
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    max-width: 500px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.menu h1 {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #35588f;
+    font-size: 1.2rem;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-price {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* ABOUT */
+
+.about-title,
+.about-section-title {
+    text-align: center;
+}
+
+.about {
+    background-color: #1e3a5f;
+    padding: 2rem;
+    border-radius: 15px;
+    color: white;
+    max-width: 600px;
+    width: 90%;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+.about-title {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+}
+.about-history h2,
+.about-contact h2 {
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+}
+.about-history p {
+    margin: 0 0 1.2rem 0;
+}
+.about-contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+.about-contact li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
 }
