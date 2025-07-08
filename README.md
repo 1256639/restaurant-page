@@ -5,7 +5,7 @@
 ---
 
 A single-page restaurant website built with **JavaScript**, **Webpack**, and **DOM manipulation**.  
-All content is generated dynamically via JavaScript modules, no static HTML beyond the template!
+All content is generated dynamically via JavaScript modules, no static HTML beyond the template.
 
 ---
 
